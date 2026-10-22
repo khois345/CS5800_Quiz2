@@ -1,5 +1,8 @@
 package dateChecker;
 
+/**
+ * An enum representing the months of the year.
+ */
 public enum Month {
     JANUARY,
     FEBRUARY,
