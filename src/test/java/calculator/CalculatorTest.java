@@ -19,7 +19,7 @@ class CalculatorTest {
     }
 
     @Test
-    void subtractLargerFromSmallerGivesNegative() {
+    void subtractLargerFromSmaller() {
         assertEquals(-6, calculator.subtract(4, 10));
     }
 }
