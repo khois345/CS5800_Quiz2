@@ -15,8 +15,8 @@ public class DateChecker {
                 AUGUST, 
                 OCTOBER, 
                 DECEMBER -> true;
-            case FEBRUARY -> false;     // Handle February explicitly
-            default -> false;
+            case FEBRUARY -> false;     // Handle February explicitly for having 28 or 29 days
+            default -> false;           // else 30 days
         };
     }
 }
