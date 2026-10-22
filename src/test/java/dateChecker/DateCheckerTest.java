@@ -4,7 +4,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DateCheckerTest {
@@ -57,5 +59,13 @@ class DateCheckerTest {
     @Test
     void februaryDoesNotHave31Days() {
         assertFalse(dateChecker.has31Days(Month.FEBRUARY), "February should not have 31 days");
+    }
+
+    @Test
+    void nullMonthGiven() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> dateChecker.has31Days(null));
+        String expectedMsg = "Month cannot be null";
+        String actualMsg = exception.getMessage();
+        assertEquals(expectedMsg, actualMsg);
     }
 }
