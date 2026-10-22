@@ -17,6 +17,16 @@ class CalculatorTest {
     }
 
     @Test
+    void sumWithNegativeNumber() {
+        assertEquals(-2, calculator.sum(3, -5));
+    }
+
+    @Test
+    void sumWithZero() {
+        assertEquals(7, calculator.sum(7, 0));
+    }
+
+    @Test
     void subtractSmallerFromLarger() {
         assertEquals(6, calculator.subtract(10, 4));
     }
