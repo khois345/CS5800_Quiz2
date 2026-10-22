@@ -75,7 +75,17 @@ class CalculatorTest {
     }
 
     @Test
+    void isEvenTrueForNegativeEvenNumber() {
+        assertTrue(calculator.isEven(-6));
+    }
+
+    @Test
     void isEvenFalseForOddNumber() {
         assertFalse(calculator.isEven(7));
+    }
+
+    @Test
+    void isEvenFalseForNegativeOddNumber() {
+        assertFalse(calculator.isEven(-3));
     }
 }
