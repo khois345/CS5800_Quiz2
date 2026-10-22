@@ -10,4 +10,7 @@
 - dateChecker
 built with Test Driven Development (Red -> Green -> Refactor) using JUnit 5.
 
+## Running the tests
+- IntelliJ: run `CompleteUnitTest` to run all tests in both packages
+
 ## IDE used: IntelliJ IDEA 2026
