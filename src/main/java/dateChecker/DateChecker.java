@@ -15,6 +15,7 @@ public class DateChecker {
                 AUGUST, 
                 OCTOBER, 
                 DECEMBER -> true;
+            case FEBRUARY -> false;     // Handle February explicitly
             default -> false;
         };
     }
