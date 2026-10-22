@@ -22,4 +22,19 @@ class CalculatorTest {
     void subtractLargerFromSmaller() {
         assertEquals(-6, calculator.subtract(4, 10));
     }
+
+    @Test
+    void multiplyTwoPositiveNumbers() {
+        assertEquals(12, calculator.multiply(3, 4));
+    }
+
+    @Test
+    void multiplyByNegative() {
+        assertEquals(-12, calculator.multiply(3, -4));
+    }
+
+    @Test
+    void multiplyByZero() {
+        assertEquals(0, calculator.multiply(7, 0));
+    }
 }
